@@ -5,8 +5,7 @@
     <groupId>com.xuecheng</groupId>
     <artifactId>xuecheng-plus-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xuecheng-plus-parent</name>
-    <description>xuecheng-plus-parent</description>
+
     <packaging>pom</packaging>
 
     <properties>
@@ -36,7 +35,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

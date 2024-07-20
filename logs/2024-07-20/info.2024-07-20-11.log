@@ -1,0 +1,6 @@
+2024-07-20 12:00:04,512 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,name,code,item_values FROM dictionary
+2024-07-20 12:00:04,512 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,name,code,item_values FROM dictionary
+2024-07-20 12:00:04,519 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - ==> Parameters: 
+2024-07-20 12:00:04,519 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - ==> Parameters: 
+2024-07-20 12:00:04,521 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - <==      Total: 17
+2024-07-20 12:00:04,521 DEBUG [http-nio-63110-exec-3][BaseJdbcLogger.java:137] - <==      Total: 17
