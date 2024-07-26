@@ -33,6 +33,7 @@ class CourseBaseInfoServiceTests {
         pageParams.setPageSize(3L);//每页记录数
 
         PageResult<CourseBase> courseBasePageResult = courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParamsDto);
+        System.out.println("======");
         System.out.println(courseBasePageResult);
     }
 
