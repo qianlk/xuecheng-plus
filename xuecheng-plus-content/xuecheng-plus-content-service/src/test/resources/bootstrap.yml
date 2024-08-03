@@ -1,22 +1,47 @@
+#server:
+#  servlet:
+#    context-path: /content
+#  port: 63040
+#微服务配置
 spring:
   application:
-    name: content-service
+    name: content-api
+  #  datasource:
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    url: jdbc:mysql://192.168.137.12:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+  #    username: root
+  #    password: mysql
   cloud:
     nacos:
       server-addr: 192.168.137.12:8848
+      # 服务注册
+      discovery:
+        namespace: xc_plus_dev
+        group: xuecheng-plus-project
       # 配置中心
       config:
-        namespace: 8990cb58-6203-4e6c-9701-5da93011a0f7
+        namespace: xc_plus_dev
         group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true
+        # 拓展额外配置
+        extension-configs:
+          - data-id: content-service-${spring.profiles.active}.yaml
+            group: xuecheng-plus-project
+            refresh: true
+        # 拓展共享配置
+        shared-configs:
+          - data-id: feign-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
   profiles:
     active: dev
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://192.168.137.12:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
-#    username: root
-#    password: mysql
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+#swagger:
+#  title: "学成在线内容管理系统"
+#  description: "内容系统管理系统对课程相关信息进行管理"
+#  base-package: com.xuecheng.content
+#  enabled: true
+#  version: 1.0.0
